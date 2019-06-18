@@ -31,6 +31,15 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <!--
+        Make KafkaBinderHealthIndicator a conditional on HealthIndicator to avoid CNFE #322
+        https://github.com/spring-cloud/spring-cloud-stream-binder-kafka/issues/322
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
